@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85DBD398-88FB-4470-B28F-7172229FC06A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VagasZM.Dominio</RootNamespace>
+    <AssemblyName>VagasZM.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidator.1.0.5\lib\net461\FluentValidator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comandos\AreaProfissionalComandos\Saidas\BuscaListaAreaProfisionalResultadoComando.cs" />
+    <Compile Include="Comandos\CidadeComandos\Saidas\CidadesPorEstadoResultadoComando.cs" />
+    <Compile Include="Comandos\EmpresaComandos\Entradas\InserirEmpresaComando.cs" />
+    <Compile Include="Comandos\EmpresaComandos\EmpresaComandoManipulador.cs" />
+    <Compile Include="Comandos\EmpresaComandos\Mapeamento\EmpresaComandoMap.cs" />
+    <Compile Include="Comandos\EmpresaComandos\Mapeamento\IEmpresaComandoMap.cs" />
+    <Compile Include="Comandos\EmpresaComandos\Saidas\InserirEmpresaResultadoComando.cs" />
+    <Compile Include="Comandos\TipoContratacaoComandos\Saidas\BuscaListaTipoContratacaoResultadoComando.cs" />
+    <Compile Include="Comandos\UsuarioEmpresaComandos\Entradas\AutenticarUsuarioEmpresaComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Entradas\InserirVagaEmpregoComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Mapeamento\IVagaEmpregoComandoMap.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Mapeamento\VagaEmpregoComandoMap.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Saidas\InserirVagaEmpregoResultadoComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Saidas\NumeroVagasAbertasResultadoComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Saidas\UltimasVagasEmpregoAbertasResultadoComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\Saidas\VagaEmpregoEmpresaResultadoComando.cs" />
+    <Compile Include="Comandos\VagaEmpregoComandos\VagaEmpregoComandoManipulador.cs" />
+    <Compile Include="Entidades\AreaProfissional.cs" />
+    <Compile Include="Entidades\Candidato.cs" />
+    <Compile Include="Entidades\Candidatura.cs" />
+    <Compile Include="Entidades\Empresa.cs" />
+    <Compile Include="Entidades\ExperienciaProfissional.cs" />
+    <Compile Include="Entidades\FormacaoEscolar.cs" />
+    <Compile Include="Entidades\TipoContratacao.cs" />
+    <Compile Include="Entidades\UsuarioEmpresa.cs" />
+    <Compile Include="Entidades\VagaEmprego.cs" />
+    <Compile Include="Enumeracoes\Estados.cs" />
+    <Compile Include="Enumeracoes\NivelFormacao.cs" />
+    <Compile Include="Enumeracoes\StatusVaga.cs" />
+    <Compile Include="ObjetosDeValor\CPF.cs" />
+    <Compile Include="ObjetosDeValor\Descricao.cs" />
+    <Compile Include="ObjetosDeValor\Email.cs" />
+    <Compile Include="ObjetosDeValor\Endereco.cs" />
+    <Compile Include="ObjetosDeValor\Nome.cs" />
+    <Compile Include="ObjetosDeValor\NumeroPositivo.cs" />
+    <Compile Include="ObjetosDeValor\Site.cs" />
+    <Compile Include="ObjetosDeValor\Telefone.cs" />
+    <Compile Include="ObjetosDeValor\Texto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\EmailTemplates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailTemplates.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositorios\IAreaProfissionalRepositorio.cs" />
+    <Compile Include="Repositorios\ICandidatoRepositorio.cs" />
+    <Compile Include="Repositorios\ICidadeRepositorio.cs" />
+    <Compile Include="Repositorios\IEmpresaRepositorio.cs" />
+    <Compile Include="Repositorios\ITipoContratacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IUsuarioEmpresaRepositorio.cs" />
+    <Compile Include="Repositorios\IVagaEmpregoRepositorio.cs" />
+    <Compile Include="Servicos\IEmailServico.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VagasZM.Compartilhado\VagasZM.Compartilhado.csproj">
+      <Project>{26CAFD81-C369-4905-9A11-6ACAA14E78C8}</Project>
+      <Name>VagasZM.Compartilhado</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServicosDominio\Classes\" />
+    <Folder Include="ServicosDominio\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\EmailTemplates.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailTemplates.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

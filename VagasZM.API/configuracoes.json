@@ -1,0 +1,6 @@
+﻿{
+  "ConnectionStrings": {
+    //"CnnStr": "Server=(localdb)\\v11.0;Database=ModernStore;User ID=sa;Password=sqlexpress;"    
+    "VagazZM": "Server = DESKTOP-RS1D4LE\\SQLEXPRESS; Database=VagasZM; Trusted_Connection=True;"
+  }
+}
