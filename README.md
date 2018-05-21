@@ -4,14 +4,14 @@ Projeto desenvolvido em ASP.NET Core (full framewrok 4.7.1). Este projeto tem co
 # Aspectos Técnicos
 O projeto contempla:
 
-1 - ASP.NET Core MVC
-2 - Testes de Unidade
-3 - Conceitos relacionados ao SOLID e Programação Orientada a Objetos
-4 - Conceitos de CQRS (Command Query Responsibility Segregation)
-5 - Injeção de Dependência
-6 - Repository Pattern
-7 - Objetos de Valor (Values Objects) e Entidades (Entity) - Conceitos relacionados ao DDD
-8 - Autenticação e Autorização
-9 - Entity Framework
-10 - Dapper
-11 - Unit Of Work
+- ASP.NET Core MVC
+- Testes de Unidade
+- Conceitos relacionados ao SOLID e Programação Orientada a Objetos
+- Conceitos de CQRS (Command Query Responsibility Segregation)
+- Injeção de Dependência
+- Repository Pattern
+- Objetos de Valor (Values Objects) e Entidades (Entity) - Conceitos relacionados ao DDD
+- Autenticação e Autorização
+- Entity Framework
+- Dapper
+- Unit Of Work
